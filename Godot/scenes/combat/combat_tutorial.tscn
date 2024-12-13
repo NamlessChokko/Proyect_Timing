@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://byi2l840usiek"]
+
+[ext_resource type="Script" path="res://scripts/combat/combat_tutorial_logic_controler.gd" id="1_ssgmy"]
+[ext_resource type="Script" path="res://scripts/combat/combat_handler.gd" id="2_3ywal"]
+[ext_resource type="PackedScene" uid="uid://4y3y1lrpmr6h" path="res://scenes/player/player_in_combat.tscn" id="3_defny"]
+[ext_resource type="PackedScene" uid="uid://b5iuq8o744obp" path="res://scenes/enemy_in_combat/enemy_in_combat.tscn" id="4_7opuc"]
+
+[node name="Combat" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="scene_controler" type="Node" parent="."]
+script = ExtResource("1_ssgmy")
+
+[node name="combat_handler" type="Node" parent="."]
+script = ExtResource("2_3ywal")
+
+[node name="Player_in_combat" parent="." instance=ExtResource("3_defny")]
+position = Vector2(252, 383)
+
+[node name="enemy_in_combat" parent="." instance=ExtResource("4_7opuc")]
+position = Vector2(830, 264)

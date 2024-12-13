@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://4y3y1lrpmr6h"]
+
+[ext_resource type="Script" path="res://scripts/player_scripts/player_in_combat/player_dash.gd" id="1_g4n3q"]
+[ext_resource type="Texture2D" uid="uid://14joivc616wl" path="res://assets/sprites/Player_test_model.png" id="2_jy5c4"]
+[ext_resource type="Script" path="res://scripts/player_scripts/player_in_combat/player_position.gd" id="3_i6vou"]
+
+[node name="Player_in_combat" type="Node2D"]
+position = Vector2(559, 347)
+
+[node name="player_sprite" type="Sprite2D" parent="."]
+position = Vector2(7.27596e-12, 0)
+scale = Vector2(0.078125, 0.0778125)
+texture = ExtResource("2_jy5c4")
+
+[node name="player_dash" type="Node" parent="."]
+script = ExtResource("1_g4n3q")
+
+[node name="player_position" type="Node" parent="."]
+script = ExtResource("3_i6vou")

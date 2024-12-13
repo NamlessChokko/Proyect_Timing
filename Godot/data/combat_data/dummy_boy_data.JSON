@@ -1,0 +1,16 @@
+{
+    "//Enemy_stats": "",
+        "enemy_name": "Dummy Boy",
+
+        "enemy_health": 100,
+        "enemy_damage": 20,
+    
+
+    "//Player_stats": "",
+
+        "//Parry": "",
+            "player_parry_directions": ["up", "down", "back", "diag_up", "diag_down", "none"]
+
+
+
+}

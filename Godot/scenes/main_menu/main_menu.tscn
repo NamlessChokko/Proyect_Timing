@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://wpxqi8sjujqb"]
+
+[ext_resource type="Script" path="res://scripts/main_menu_logic/main_menu_logic_controler.gd" id="1_2q1sv"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -23.0
+offset_right = 1186.0
+offset_bottom = 671.0
+color = Color(0.597928, 0.54844, 0.380191, 1)
+
+[node name="buttoms_container" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 393.0
+offset_top = 301.0
+offset_right = 752.0
+offset_bottom = 570.0
+alignment = 1
+
+[node name="play_buttom" type="Button" parent="buttoms_container"]
+custom_minimum_size = Vector2(70, 150)
+layout_mode = 2
+text = "Play"
+
+[node name="exit_buttom" type="Button" parent="buttoms_container"]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+text = "Exit"
+
+[node name="title_label" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 188.0
+offset_top = 105.0
+offset_right = 380.0
+offset_bottom = 137.0
+scale = Vector2(4, 4)
+text = "Proyect Timing Prototipe"
+
+[node name="menu_logic_controller" type="Node" parent="."]
+script = ExtResource("1_2q1sv")
+
+[connection signal="button_up" from="buttoms_container/play_buttom" to="menu_logic_controller" method="_on_play_buttom_button_up"]
+[connection signal="button_up" from="buttoms_container/exit_buttom" to="menu_logic_controller" method="_on_exit_buttom_button_up"]
